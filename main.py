@@ -6,26 +6,26 @@
 # result = number(-5)
 # print(f"For now i show u value of result: {result}") 
 
-# def describe_pet(animal_type, *args):
-    # print(f"I have two {animal_type}")
+def describe_pet(animal_type, *args):
+    print(f"I have two {animal_type}")
 
-    # if len(args) == 2:
-    #     print(f"His name is {args[0]} and {args[1]} is a {animal_type}")
-    # elif len(args) == 1:
-    #     print(f"His name is {args[0]} he is a {animal_type}")
-    # else:
-    #     names = ""
-    #     for name in args:
-    #         if name == args[-1]: 
-    #             names = names + "and " + name
-    #         else:
-    #             names = names + name + ", "
-    #     print(f"His name are {names}")
+    if len(args) == 2:
+        print(f"His name is {args[0]} and {args[1]} is a {animal_type}")
+    elif len(args) == 1:
+        print(f"His name is {args[0]} he is a {animal_type}")
+    else:
+        names = ""
+        for name in args:
+            if name == args[-1]: 
+                names = names + "and " + name
+            else:
+                names = names + name + ", "
+        print(f"His name are {names}")
 
-    # describe_pet("cat", "Leva", "Nusha", "Liza", "Dora", "Marsik")
-    # describe_pet("cat", "Leva")
-    # describe_pet("cat", "Leva")
-    # describe_pet("cat", "Leva", "Nusha", "Liza")
+    describe_pet("cat", "Leva", "Nusha", "Liza", "Dora", "Marsik")
+    describe_pet("cat", "Leva")
+    describe_pet("cat", "Leva")
+    describe_pet("cat", "Leva", "Nusha", "Liza")
 
 
 # def check_number(number):
@@ -62,14 +62,37 @@
 # print(analyze_number(-5))
 # print(analyze_number(0))
 
-def triangle_type(a, b, c):
-    if not (a + b > c and a + c > b and c + b > a):
-        return "not a triangle"
-    elif a == b and b == c:
-        return "equilateral"
-    elif a == b or a == c or c == b:
-        return "isosceles"
-    else:
-        return "scalene"
+# def triangle_type(a, b, c):
+#     if not (a + b > c and a + c > b and c + b > a):
+#         return "not a triangle"
+#     elif a == b and b == c:
+#         return "equilateral"
+#     elif a == b or a == c or c == b:
+#         return "isosceles"
+#     else:
+#         return "scalene"
 
-print(triangle_type(9, 7, 6))
+# print(triangle_type(9, 7, 6))
+
+
+# def sum_only_even(limit):
+#     num = 1
+#     sum_even = 0
+
+#     while num <= limit:
+#         if num % 2 == 0:
+#             sum_even = sum_even + num
+
+#         num = num + 1
+
+#     return sum_even
+
+# print(sum_only_even(10))
+
+numbers = []
+
+for number in range(20, 0, -1):
+    if number % 2 == 0:
+        numbers.append(number)
+
+print(numbers)

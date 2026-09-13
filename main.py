@@ -6,26 +6,26 @@
 # result = number(-5)
 # print(f"For now i show u value of result: {result}") 
 
-def describe_pet(animal_type, *args):
-    print(f"I have two {animal_type}")
+# def describe_pet(animal_type, *args):
+#     print(f"I have two {animal_type}")
 
-    if len(args) == 2:
-        print(f"His name is {args[0]} and {args[1]} is a {animal_type}")
-    elif len(args) == 1:
-        print(f"His name is {args[0]} he is a {animal_type}")
-    else:
-        names = ""
-        for name in args:
-            if name == args[-1]: 
-                names = names + "and " + name
-            else:
-                names = names + name + ", "
-        print(f"His name are {names}")
+#     if len(args) == 2:
+#         print(f"His name is {args[0]} and {args[1]} is a {animal_type}")
+#     elif len(args) == 1:
+#         print(f"His name is {args[0]} he is a {animal_type}")
+#     else:
+#         names = ""
+#         for name in args:
+#             if name == args[-1]: 
+#                 names = names + "and " + name
+#             else:
+#                 names = names + name + ", "
+#         print(f"His name are {names}")
 
-    describe_pet("cat", "Leva", "Nusha", "Liza", "Dora", "Marsik")
-    describe_pet("cat", "Leva")
-    describe_pet("cat", "Leva")
-    describe_pet("cat", "Leva", "Nusha", "Liza")
+#     describe_pet("cat", "Leva", "Nusha", "Liza", "Dora", "Marsik")
+#     describe_pet("cat", "Leva")
+#     describe_pet("cat", "Leva")
+#     describe_pet("cat", "Leva", "Nusha", "Liza")
 
 
 # def check_number(number):
@@ -89,10 +89,33 @@ def describe_pet(animal_type, *args):
 
 # print(sum_only_even(10))
 
-numbers = []
+# def is_prime(number):
+#     if number < 2:
+#         return False
+    
+#     divisors = True
 
-for number in range(20, 0, -1):
-    if number % 2 == 0:
-        numbers.append(number)
+#     for divisor in range(2, number):
+#         if number % divisor == 0:
+#             divisors = False
+#             break
+        
+#     return divisors
 
-print(numbers)
+# print(is_prime(15))
+
+
+
+def find_devisors(number):
+    devisors = []
+
+    for devisor in range(1, number + 1):
+        if number % devisor == 0:
+            devisors.append(devisor)
+
+    return devisors
+
+print(find_devisors(14))
+print(find_devisors(142))
+print(find_devisors(17))
+print(find_devisors(4978))

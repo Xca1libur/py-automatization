@@ -106,16 +106,37 @@
 
 
 
-def find_devisors(number):
-    devisors = []
+# def find_devisors(number):
+#     devisors = []
 
-    for devisor in range(1, number + 1):
-        if number % devisor == 0:
-            devisors.append(devisor)
+#     for devisor in range(1, number + 1):
+#         if number % devisor == 0:
+#             devisors.append(devisor)
 
-    return devisors
+#     return devisors
 
-print(find_devisors(14))
-print(find_devisors(142))
-print(find_devisors(17))
-print(find_devisors(4978))
+# print(find_devisors(4050))
+
+def find(number):
+    spi = []
+
+    for divisor in range(2, number + 1):
+        while number % divisor == 0:
+            spi.append(divisor)
+            number = number // divisor
+        
+    return spi
+
+
+def count(n):
+    number = 1
+    i = []
+
+    while number < n:
+        print(number)
+        i.append(number)
+        number += 1
+
+    return i 
+
+print(count(10))

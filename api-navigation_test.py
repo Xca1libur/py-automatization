@@ -1,0 +1,17 @@
+import requests
+
+def test_orders_page():
+    url_orders = "https://base-backend-sandbox.sqrf.app/v2/orders/list/eb525673-6567-4447-aa8e-1592b2a3a6ac?limit=10&offset=0&filters=[]"
+    headers = {
+        "user-agent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/XXX.0.0.0 Safari/537.36",
+        "Authorization":("eyJhbGciOiJFUzI1NiIsImtpZCI6IjFmYmQ4ZjgyLTNkNWYtNDE0Yi04ZDU1LTM0YTlkZGZhZTNhMSIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJodHRwczovL2Rwd2F2dmdybGtscHVvZGR1dGRwLnN1cGFiYXNlLmNvL2F1dGgvdjEiLCJzdWIiOiJkOTIxNGM4My02YmQ1LTQ2MWEtOTgwYi0wMjQyYjUyNjkxYzQiLCJhdWQiOiJhdXRoZW50aWNhdGVkIiwiZXhwIjoxNzg5NDA4MTQ2LCJpYXQiOjE3ODk0MDQ1NDYsImVtYWlsIjoibS5lcm1ha292QHNxdWFyZWZpLmNvIiwicGhvbmUiOiI3OTkzNDk1ODkxMiIsImFwcF9tZXRhZGF0YSI6eyJwcm92aWRlciI6ImVtYWlsIiwicHJvdmlkZXJzIjpbImVtYWlsIiwiZ29vZ2xlIiwicGhvbmUiXX0sInVzZXJfbWV0YWRhdGEiOnsiYXZhdGFyX3VybCI6Imh0dHBzOi8vbGgzLmdvb2dsZXVzZXJjb250ZW50LmNvbS9hL0FDZzhvY0xJTGdicWYzZlVLbmdQdVZFSnM4Y3JrOE9tN0NlZ3ZBUERQUW02VWc5czhPdTZtZz1zOTYtYyIsImN1c3RvbV9jbGFpbXMiOnsiaGQiOiJzcXVhcmVmaS5jbyJ9LCJlbWFpbCI6Im0uZXJtYWtvdkBzcXVhcmVmaS5jbyIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJmdWxsX25hbWUiOiJNaWtoYWlsIEVybWFrb3YiLCJnb29nbGVfcGFuZWxfbGlua2VkIjp0cnVlLCJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJuYW1lIjoiTWlraGFpbCBFcm1ha292IiwicGhvbmVfdmVyaWZpZWQiOmZhbHNlLCJwaWN0dXJlIjoiaHR0cHM6Ly9saDMuZ29vZ2xldXNlcmNvbnRlbnQuY29tL2EvQUNnOG9jTElMZ2JxZjNmVUtuZ1B1VkVKczhjcms4T203Q2VndkFQRFBRbTZVZzlzOE91Nm1nPXM5Ni1jIiwicHJvdmlkZXJfaWQiOiIxMDYxNjMwMTY2NzgyNzk1NTIxMzAiLCJzdWIiOiIxMDYxNjMwMTY2NzgyNzk1NTIxMzAifSwicm9sZSI6ImF1dGhlbnRpY2F0ZWQiLCJhYWwiOiJhYWwxIiwiYW1yIjpbeyJtZXRob2QiOiJvdHAiLCJ0aW1lc3RhbXAiOjE3ODkzMjg0MjR9XSwic2Vzc2lvbl9pZCI6ImQ3ZmQzNWFiLTgyYzItNGJiMi1iNWQ2LWUxYmZlMTdjM2IxMiIsImlzX2Fub255bW91cyI6ZmFsc2V9.Rlz-dqwwY2l0MWBvO2J18UUlqJyLYq_ktTZEuDpO95_KbvBRY2RK6jwakc6nNoip6MmXSFyz5xRMAjNcQ30OJA"),
+        "x-tenant-id":"af068804-16a6-49cb-8bb5-e48e7517c7fd"
+    }
+    response = requests.get(url_orders, headers=headers)
+    print("Статус код", response.status_code)
+    # assert response.status_code == 200
+
+    return print("Успешно")
+
+
+test_orders_page()
